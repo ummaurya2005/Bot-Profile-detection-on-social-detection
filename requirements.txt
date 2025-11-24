@@ -1,0 +1,10 @@
+Flask
+xgboost
+scikit-learn
+transformers
+torch
+scipy
+numpy
+pandas
+joblib
+emoji

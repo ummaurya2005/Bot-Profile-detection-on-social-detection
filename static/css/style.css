@@ -1,0 +1,210 @@
+/* Global Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body {
+    background: #0b1020;
+    color: #f5f5f5;
+}
+
+/* Layout Container */
+.page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px 16px 40px;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.header h1 {
+    font-size: 2.1rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.header p {
+    font-size: 0.92rem;
+    color: #a8b3cf;
+}
+
+/* Grid layout */
+.main {
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+    gap: 24px;
+}
+
+/* Card UI */
+.card {
+    background: #141a33;
+    border-radius: 14px;
+    padding: 22px 22px 26px;
+    box-shadow: 0 12px 34px rgba(0, 0, 0, 0.45);
+    animation: fadeIn 0.25s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.card h2 {
+    font-size: 1.25rem;
+    margin-bottom: 14px;
+    font-weight: 600;
+}
+
+/* Form Fields */
+.field-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 14px;
+}
+
+.field-group label {
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+    color: #c3cee6;
+    font-weight: 500;
+}
+
+.field-group input,
+.field-group textarea {
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid #283251;
+    background: #0f1425;
+    color: #f5f5f5;
+    font-size: 0.9rem;
+    transition: 0.2s ease;
+}
+
+.field-group input:focus,
+.field-group textarea:focus {
+    outline: none;
+    border-color: #4f9cff;
+    box-shadow: 0 0 0 1px rgba(79, 156, 255, 0.4);
+}
+
+/* Row of fields */
+.field-row {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 8px;
+}
+
+.field-row .field-group {
+    flex: 1;
+}
+
+/* Radio Buttons */
+.radio-group {
+    display: flex;
+    gap: 14px;
+    margin-top: 4px;
+    font-size: 0.9rem;
+}
+
+.radio-group input {
+    margin-right: 6px;
+}
+
+/* Submit Button */
+.btn-primary {
+    margin-top: 10px;
+    padding: 12px 20px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #4f9cff, #6c5ce7);
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(79, 156, 255, 0.45);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+    opacity: 0.85;
+}
+
+/* Loading text */
+.loading {
+    margin-top: 10px;
+    font-size: 0.85rem;
+    color: #9bb3ff;
+}
+
+/* Result Label */
+.result-label {
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 12px;
+    padding: 8px 16px;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 1.05rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.result-label.bot {
+    background: rgba(255, 77, 77, 0.18);
+    color: #ff6b6b;
+    border: 1px solid rgba(255, 77, 77, 0.6);
+}
+
+.result-label.human {
+    background: rgba(46, 213, 115, 0.15);
+    color: #2ed573;
+    border: 1px solid rgba(46, 213, 115, 0.6);
+}
+
+/* Reason Box */
+.reason-box {
+    background: #0f1427;
+    border-left: 4px solid #4f9cff;
+    padding: 10px 14px;
+    margin: 12px 0;
+    border-radius: 8px;
+    font-size: 0.92rem;
+}
+
+/* Summary List */
+.summary-list {
+    list-style: none;
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+.summary-list li {
+    margin-bottom: 6px;
+}
+
+/* Footer */
+.footer {
+    margin-top: 22px;
+    text-align: center;
+    font-size: 0.82rem;
+    color: #727b9d;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .main {
+        grid-template-columns: 1fr;
+    }
+}

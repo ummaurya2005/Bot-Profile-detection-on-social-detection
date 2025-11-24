@@ -1,0 +1,9 @@
+models/
+*.safetensors
+*.bin
+*.json
+*.pt
+*.onnx
+*.h5
+*.pkl
+venv/
